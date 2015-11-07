@@ -1,0 +1,12 @@
+# Sources other files with configurations
+# These files are in ~/.config/zsh
+
+source ~/.config/zsh/aliases.zsh
+source ~/.config/zsh/export.zsh
+source ~/.config/zsh/completion.zsh
+source ~/.config/zsh/history.zsh
+source ~/.config/zsh/keybinds.zsh
+source ~/.config/zsh/options.zsh
+source ~/.config/zsh/prompt.zsh
+source ~/.config/zsh/path.zsh
+source ~/.config/zsh/base16.zsh
