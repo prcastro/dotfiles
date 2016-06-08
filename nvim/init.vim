@@ -3,13 +3,29 @@
 "-------------------------------------------------------------------------------
 call plug#begin('~/.config/nvim/plugged')
 
+" General
+Plug 'chriskempson/base16-vim'        " Colorscheme
+Plug 'ctrlpvim/ctrlp.vim'             " Fuzzy finder
+Plug 'vim-airline/vim-airline'        " Status and tabline
+Plug 'vim-airline/vim-airline-themes' " Airline themes
+Plug 'easymotion/vim-easymotion'      " Move around easily
+Plug 'scrooloose/nerdtree'            " File manager
+Plug 'terryma/vim-multiple-cursors'   " Multiple cursors
 
-Plug 'chriskempson/base16-vim'   " Colorscheme
-Plug 'kien/ctrlp.vim'            " Fuzzy finder
-Plug 'bling/vim-airline'         " Status and tabline
-Plug 'easymotion/vim-easymotion' " Move around easily   
+" Python
+Plug 'nvie/vim-flake8'                " Flake8 for Python
 
 call plug#end()
+
+"-------------------------------------------------------------------------------
+" Button remapping
+"-------------------------------------------------------------------------------
+" NERDTree Mapping to \p
+silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 
 "-------------------------------------------------------------------------------
 " Basic Configuration
@@ -41,3 +57,7 @@ colorscheme base16-eighties    " Use this colorscheme
 let g:airline_powerline_fonts = 1
 let g:airline_theme='base16'
 
+"-------------------------------------------------------------------------------
+" NERDTree Configuration
+"-------------------------------------------------------------------------------
+let NERDTreeIgnore=['\.o$', '\~$', '\~.pyc$', '__pychache__']
