@@ -11,6 +11,11 @@ Plug 'vim-airline/vim-airline-themes' " Airline themes
 Plug 'easymotion/vim-easymotion'      " Move around easily
 Plug 'scrooloose/nerdtree'            " File manager
 Plug 'terryma/vim-multiple-cursors'   " Multiple cursors
+Plug 'sjl/gundo.vim'                  " Undo with git powers
+
+" Git
+Plug 'tpope/vim-fugitive'             " Git integration
+Plug 'airblade/vim-gitgutter'         " Git hunks and line changes
 
 " Python
 Plug 'nvie/vim-flake8'                " Flake8 for Python
@@ -40,8 +45,8 @@ set cursorline                 " Highlight line
 " Tabs and Spaces
 "-------------------------------------------------------------------------------
 set expandtab
-set shiftwidth=3
-set softtabstop=3
+set shiftwidth=4
+set softtabstop=4
 
 
 "-------------------------------------------------------------------------------
@@ -55,6 +60,7 @@ colorscheme base16-eighties    " Use this colorscheme
 " Airline Configuration
 "-------------------------------------------------------------------------------
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='base16'
 
 "-------------------------------------------------------------------------------
