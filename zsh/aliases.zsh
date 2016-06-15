@@ -7,6 +7,9 @@ alias la='ll -A' # List files, including hidden ones
 alias cd..='cd ..' # Auto-correct "cd.." typo
 alias ...='cd ../..' # Shortcut to do two directories up
 
+# Opening files
+alias open='xdg-open'
+
 # Arch Linux (pacman)
 alias update='sudo pacman -Syy --color=always'
 alias upgrade='sudo pacman -Syyu --color=always'
