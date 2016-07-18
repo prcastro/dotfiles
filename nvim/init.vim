@@ -11,7 +11,6 @@ Plug 'vim-airline/vim-airline-themes' " Airline themes
 Plug 'easymotion/vim-easymotion'      " Move around easily
 Plug 'scrooloose/nerdtree'            " File manager
 Plug 'terryma/vim-multiple-cursors'   " Multiple cursors
-Plug 'sjl/gundo.vim'                  " Undo with git powers
 
 " Git
 Plug 'tpope/vim-fugitive'             " Git integration
@@ -27,10 +26,19 @@ call plug#end()
 "-------------------------------------------------------------------------------
 " NERDTree Mapping to \p
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
+
+" Habit breaking
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
+" Change buffer
+noremap <F5> :GundoToggle<CR>
+
+" Tab navigation usng tab key
+silent! nmap <silent> <Tab> :tabn<CR>
+silent! nmap <silent> <S-Tab> :tabp<CR>
 
 "-------------------------------------------------------------------------------
 " Basic Configuration
